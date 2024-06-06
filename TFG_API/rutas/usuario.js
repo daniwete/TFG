@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const usuario_1 = require("../controlador/usuario");
+const router = (0, express_1.Router)();
+router.get("/get/:id", usuario_1.getUsuario);
+router.post("/auth", usuario_1.authUsuario);
+router.post("/post", usuario_1.postUsuarios);
+router.put("/put/:id", usuario_1.putUsuarios);
+router.delete("/delete/:id", usuario_1.deleteUsuarios);
+router.put("/agregarCarrito/:id/ins/:idC", usuario_1.putShopping);
+exports.default = router;
